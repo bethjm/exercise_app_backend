@@ -28,7 +28,7 @@ DEBUG = True
 # BEFORE
 # ALLOWED_HOSTS = ["*"] 
 # 
-# AFTER 
+# ############AFTER 
 ALLOWED_HOSTS = [".awsapprunner.com"]
 
 
