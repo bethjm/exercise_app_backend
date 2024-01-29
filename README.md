@@ -1,28 +1,23 @@
-<h1>StrengthSidekick</h1>
+# Strength Side Kick
 
-<h3>Click <a href="https://github.com/bethjm/exercise_app_frontend">HERE</a> for the front end repo</h3>
+Strength side kick is an app for people who want high quality personal training without the high cost of a personal trainer. This app has been an idea in my head for the last 5 years, well before I thought software engineering was in my future. TLDR; Users can log into the app and take a 4 question quiz to get a customized workout plan that matches their needs.
 
-  <h3>Click <a href="https://www.loom.com/share/5293069034964ab19fcfabaf2758ea25">HERE</a> for a video walk through of the application and explanation of code logic</h3>
 
-<p>StrengthSidekick is a fitness application that harnesses the power of biomechanics to generate personalized workouts tailored to individual goals, experience levels, and available equipment. The app employs an algorithm designed to replicate the expertise of a personal trainer, ensuring that the generated workouts prioritize both effectiveness and efficiency.</p>
+## Access
 
-<h2>Features</h2>
+- Web version: [Strength Sidekick](https://strengthsidekick.netlify.app/)
+- Front End: [Front End](https://github.com/bethjm/exercise_app_frontend)
+- Video Walk Through: [Video Walk Through] (https://www.loom.com/share/5293069034964ab19fcfabaf2758ea25)
 
-<ul>
-  <li><strong>Customized Workouts:</strong> The app generates workouts based on various factors, including fitness goals, experience levels, preferred workout location (gym, home, or bodyweight-only), available equipment, and more.</li>
-  
-  <li><strong>Biomechanics-Informed Algorithm:</strong> StrengthSidekick's algorithm leverages biomechanical principles to optimize exercise selection and sequencing, enhancing the overall efficacy of the generated workouts.</li>
-  
-  <li><strong>Exercise Cues:</strong> The app provides detailed cues for each exercise to guide users in maintaining proper form and technique. These cues are stored in a separate model for easy management.</li>
-</ul>
+## How it works
+-The quiz asks about the experience level, what their goals are (Stability, push up, Balance, etc), what their preferred split is, and where they’re working out (home, gym, on the go). 
+-The algorithm that I created accesses the API that I created to generate a workout that matches their criteria. Users are able to save the workout to access it later. In the saved workouts they will find that there are reps generated for them based on their goals, cues for them to pay attention to, and a video to watch demonstrating the workout.
+-When users start their workout they are given a prompt to answer about their sleep, motivation, and fatigue levels. This plots the points on a. Graph which they can pull up later to help draw corrections between the 3 factors.
 
-<h2>Tech</h2>
+## Technology Stack
 
-<h2>Database:</h2>
-<p>The project uses PostgreSQL as the database management system. PostgreSQL is known for its robustness, extensibility, and support for complex queries.</p>
+- **Back End:** The Back End is built with Django and PostgreSQL. The API categorizes exercises by category, subcategory, goals, and more. These data points enable the algorithm to select the most suitable exercises for users.
 
-<h2>Django Rest Framework (3.14.0):</h2>
-<p>Django Rest Framework (DRF) is a powerful and flexible toolkit for building Web APIs in Django applications. It extends Django's capabilities to handle serialization, authentication, permissions, and viewsets for API endpoints.</p>
+- **Front End:** The Front End is built using ReactNative and is deployed on the web for easy access. Workouts are stored using AsyncStorage as a cost-saving measure. Future plans may involve saving data to a dedicated database for trend tracking and additional user data points.
 
-<h2>Django Multiselectfield (0.1.12):</h2>
-<p>This library provides a model and form fields for handling multiple selections in Django models. It's used in the project to handle multiple choices for fields such as fitness goals, experience levels, and workout locations.</p>
+***Note:*** My personal education background is in biomechanics and post physical therapy training. The exercises that users get are not your run of the mill deadlift and lunges. The exercises are programmed to help improve mobility, joint pain, breathing, and functional strength.
