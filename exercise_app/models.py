@@ -158,8 +158,8 @@ class Exercise(models.Model):
     NO_TEMPO = 'no_tempo'
     CANNOT_BE_ASSIGNED = 'cannot_be_assigned'
     HAS_TEMPO_ASSIGNED = [
-        (YES, 'Yes'),
-        (NO_TEMPO, 'No'),
+        (YES, 'Tempo has been assigned already'),
+        (NO_TEMPO, 'Not assigned yet'),
         (CANNOT_BE_ASSIGNED, 'Cannot be assigned a tempo')
     ]
 
