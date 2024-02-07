@@ -154,12 +154,27 @@ class Exercise(models.Model):
         (BODYWEIGHT, 'Body weight only workout')
     ]
 
+    ECCENTRIC = 'eccentric'
+    CONCENTRIC = 'concentric'
+    ISOMETRIC = 'isometric'
+    NO_TEMPO = 'no_tempo'
+    CANNOT_BE_ASSIGNED = 'cannot_be_assigned'
+    HAS_TEMPO_ASSIGNED = [
+        (ECCENTRIC, 'Eccentric'),
+        (CONCENTRIC, 'Concentric'),
+        (ISOMETRIC, 'Isometric'),
+        (NO_TEMPO, 'No Tempo'),
+        (CANNOT_BE_ASSIGNED, 'Cannot Be Assigned A Tempo')
+    ]
+
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255, blank=False, null=False)
     category = models.CharField(max_length=255, choices=CATEGORY_CHOICES, blank=False, null=False)
     subcategory = models.CharField(max_length=255, choices=SUB_CATEGORY_CHOICES, blank=False, null=False)
     fitness_goal = MultiSelectField(max_length=255, choices=GOAL_CHOICES, blank=False, null=False)
     can_be_warmup = models.BooleanField(default=False)
+    can_be_assigned_weight_hold = models.BooleanField(default=False)
+    has_tempo_assigned = MultiSelectField(max_length=255, choices=HAS_TEMPO_ASSIGNED, default=CANNOT_BE_ASSIGNED, blank=False, null=False)
     experience_level = MultiSelectField(max_length=255, choices=EXPERIENCE_CHOICES, blank=False, null=False)
     workout_location = MultiSelectField(max_length=255, choices=LOCATION_CHOICES, default=GYM, blank=False, null=False)
     bi_or_uni = models.CharField(max_length=255, choices=BIORUNI_CHOICES, blank=False, null=False)
