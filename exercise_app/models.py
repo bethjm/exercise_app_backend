@@ -154,16 +154,12 @@ class Exercise(models.Model):
         (BODYWEIGHT, 'Body weight only workout')
     ]
 
-    ECCENTRIC = 'eccentric'
-    CONCENTRIC = 'concentric'
-    ISOMETRIC = 'isometric'
+    YES = 'yes'
     NO_TEMPO = 'no_tempo'
     CANNOT_BE_ASSIGNED = 'cannot_be_assigned'
     HAS_TEMPO_ASSIGNED = [
-        (ECCENTRIC, 'Eccentric'),
-        (CONCENTRIC, 'Concentric'),
-        (ISOMETRIC, 'Isometric'),
-        (NO_TEMPO, 'No Tempo'),
+        (YES, 'Yes'),
+        (NO_TEMPO, 'No'),
         (CANNOT_BE_ASSIGNED, 'Cannot be assigned a tempo')
     ]
 
