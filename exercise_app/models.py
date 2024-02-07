@@ -170,7 +170,7 @@ class Exercise(models.Model):
     fitness_goal = MultiSelectField(max_length=255, choices=GOAL_CHOICES, blank=False, null=False)
     can_be_warmup = models.BooleanField(default=False)
     can_be_assigned_weight_hold = models.BooleanField(default=False)
-    has_tempo_assigned = MultiSelectField(max_length=255, choices=HAS_TEMPO_ASSIGNED, default=CANNOT_BE_ASSIGNED, blank=False, null=False)
+    has_tempo_assigned = MultiSelectField(max_length=255, choices=HAS_TEMPO_ASSIGNED, blank=False, null=False)
     experience_level = MultiSelectField(max_length=255, choices=EXPERIENCE_CHOICES, blank=False, null=False)
     workout_location = MultiSelectField(max_length=255, choices=LOCATION_CHOICES, default=GYM, blank=False, null=False)
     bi_or_uni = models.CharField(max_length=255, choices=BIORUNI_CHOICES, blank=False, null=False)
