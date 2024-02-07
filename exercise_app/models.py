@@ -164,7 +164,7 @@ class Exercise(models.Model):
         (CONCENTRIC, 'Concentric'),
         (ISOMETRIC, 'Isometric'),
         (NO_TEMPO, 'No Tempo'),
-        (CANNOT_BE_ASSIGNED, 'Cannot Be Assigned A Tempo')
+        (CANNOT_BE_ASSIGNED, 'Cannot be assigned a tempo')
     ]
 
     id = models.AutoField(primary_key=True)
