@@ -1,6 +1,10 @@
 # Strength Side Kick
 
+<<<<<<< HEAD
 Strength side kick is an app for people who want high quality personal training without the high cost of a personal trainer. This app has been an idea in my head for the last 5 years, well before I thought software engineering was in my future. TLDR; Users can log into the app and take a 4 question quiz to get a customized workout plan that matches their needs.
+=======
+<h4>Click <a href="https://github.com/bethjm/exercise_app_frontend">HERE</a> for the front end repo</h4>
+>>>>>>> parent of 5596317e (readme)
 
 
 ## Access
