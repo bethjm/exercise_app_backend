@@ -109,8 +109,14 @@ DATABASE_URL = DATABASE_URL = os.getenv('postgres://postgres:c4B6eE-BAD*4e5eG6D6
 if not DATABASE_URL:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'exercises',
+            'USER': 'bethm',
+            'PASSWORD': 'noodlenoodle',
+            'HOST': 'localhost',
+            'PORT': '5432',
+            # 'ENGINE': 'django.db.backends.sqlite3',
+            # 'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
 else:
